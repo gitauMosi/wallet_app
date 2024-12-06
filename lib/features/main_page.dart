@@ -28,6 +28,10 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
         body: _pages[itemSelected],
         bottomNavigationBar: BottomNavigationBar(
+          currentIndex: itemSelected,
+          onTap: handleItemChange,
+          unselectedItemColor: Colors.grey,
+          selectedItemColor: Theme.of(context).colorScheme.primary,
           items: [
             bottomNavigationItem(icon: const Icon(Icons.home), label: 'Home'),
             bottomNavigationItem(
